@@ -13,7 +13,7 @@ export const selectVisibleContacts = createSelector(
     const contactsinTheList = contacts.filter(contact =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
-    console.log(contactsinTheList);
+
     return contactsinTheList;
   }
 );
