@@ -1,6 +1,7 @@
 .form {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   min-width: 600px;
   padding: 25px;
@@ -10,6 +11,9 @@
 .inputIn {
   display: inline-flex;
   text-align: center;
+}
+.inputIn input {
+  margin: 0 10px;
 }
 
 .btnAdd {
