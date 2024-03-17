@@ -18,8 +18,12 @@
   margin-bottom: 15px;
 }
 .btnDel {
-  margin-left: 10px;
-  background: red;
+  padding: 5px 10px;
+  margin-left: 15px;
+  border-radius: 4px;
+  border: 1px solid gray;
+  background-color: red;
+  color: white;
 }
 .btnDel:hover {
   transform: scale(1.3);

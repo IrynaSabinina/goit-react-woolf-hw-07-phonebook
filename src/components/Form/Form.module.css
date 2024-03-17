@@ -13,7 +13,12 @@
 }
 
 .btnAdd {
+  padding: 5px 10px;
+  margin-left: 15px;
+  border-radius: 4px;
+  border: 1px solid gray;
   background-color: green;
+  color: white;
 }
 .btnAdd:hover {
   transform: scale(1.3);
