@@ -5,6 +5,7 @@ const mockApi = axios.create({ baseURL: BASE_URL });
 
 export const fetchContacts = () => {
   const data = mockApi.get('/contacts');
+  console.log(data);
   return data;
 };
 

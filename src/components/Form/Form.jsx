@@ -4,6 +4,8 @@ import styles from './Form.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { addContactThunk } from '../../redux/thunks/thunks';
 import { contactsSelector } from '../../redux/selectors';
+import { nanoid } from 'nanoid';
+
 
 export const Form = () => {
   const [name, setName] = useState('');
@@ -37,7 +39,7 @@ export const Form = () => {
       alert('is already in your phonebook');
       return;
     } else {
-      dispatch(addContactThunk({ name, phone }));
+      dispatch(addContactThunk({ name, phone, id:nanoid() }));
       resetInput();
     }
   };

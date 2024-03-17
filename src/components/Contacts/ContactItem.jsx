@@ -1,14 +1,24 @@
 import PropTypes from 'prop-types';
 import styles from './Contacts.module.css';
+import { useDispatch } from 'react-redux';
+import { deleteContactThunk } from '../../redux/thunks/thunks';
 
-export const ContactItem = ({ id, name, phone, contactDelete }) => {
+export const ContactItem = ({ id, name, phone }) => {
+    const dispatch = useDispatch();
+   
+    const handleDelete = id => {
+      console.log(id)
+    dispatch(deleteContactThunk(id));
+    
+
+  };
   return (
     <li className={styles.item}>
       {name} : {phone}
       <button
         className={styles.btnDel}
         type="button"
-        onClick={() => contactDelete(id)}
+        onClick={() => handleDelete(id)}
       >
         Delete
       </button>

@@ -7,12 +7,13 @@ import { getContactsThunk } from '../redux/thunks/thunks';
 import { contactsSelector } from '../redux/selectors';
 
 export const App = () => {
-  const contacts = useSelector(contactsSelector);
-   const dispatch = useDispatch();
-    useEffect(() => {
-    dispatch(getContactsThunk());
+  const contacts = useSelector(contactsSelector)
+  const dispatch = useDispatch();
+
+
+  useEffect(() => {
+  dispatch(getContactsThunk());
   }, [dispatch]);
-  console.log("1")
 
 
   return (
@@ -20,7 +21,7 @@ export const App = () => {
       <h1>Phonebook</h1>
       <Form />
       <FindElement />
-      <ContactsList />
+      {contacts.length >0 ? <ContactsList/> : <h1 >Your phone book is empty, please add your first phone number</h1>}
     </div>
   );
 };
